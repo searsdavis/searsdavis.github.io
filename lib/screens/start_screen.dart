@@ -3,16 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:xcom_app/screens/chapters_screen.dart';
-/*
-import 'package:ktcg/screens/deck_selection_screen.dart';
-import 'package:ktcg/screens/deckbuilding_screen.dart';
-import 'package:ktcg/screens/full_screen.dart';
-import 'package:ktcg/components/managers/game_manager.dart';
-import 'package:provider/provider.dart';
-import 'package:ktcg/components/managers/library_manager.dart';
-
-import 'package:shared_preferences/shared_preferences.dart';
-*/
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});
@@ -23,7 +13,7 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Image.asset('images/start_screen_placeholder.jpg'),
         ElevatedButton(
@@ -35,10 +25,11 @@ class StartScreen extends StatelessWidget {
             foregroundColor: Colors.black,
           ),
           onPressed: () {
-            //GameManagerModel().newGame(saveFileName: saveFileName);
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const ChapterScreen()),
+              MaterialPageRoute(
+                builder: (context) => ChapterScreen(intervalMin: 30, intervalMax: 90),
+              ),
             );
           },
           child: Text(
@@ -57,12 +48,10 @@ class StartScreen extends StatelessWidget {
             foregroundColor: Colors.black,
           ),
           onPressed: () {
-            //GameManagerModel().newGame(saveFileName: saveFileName);
-            //Navigator.push(
-            //context,
-            //MaterialPageRoute(builder: (context) => const FullScreen()),
-            //MaterialPageRoute(builder: (context) => DeckSelectionScreen(saveFileName: saveFileName)),
-            //);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ChapterScreen(intervalMin: 30, intervalMax: 60)),
+            );
           },
           child: Text(
             '2 Player',
@@ -80,12 +69,10 @@ class StartScreen extends StatelessWidget {
             foregroundColor: Colors.black,
           ),
           onPressed: () {
-            //GameManagerModel().newGame(saveFileName: saveFileName);
-            //Navigator.push(
-            //context,
-            //MaterialPageRoute(builder: (context) => const FullScreen()),
-            //MaterialPageRoute(builder: (context) => DeckSelectionScreen(saveFileName: saveFileName)),
-            //);
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ChapterScreen(intervalMin: 15, intervalMax: 60)),
+            );
           },
           child: Text(
             '3+ Player',
