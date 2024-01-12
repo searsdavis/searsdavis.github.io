@@ -22,7 +22,7 @@ class ChapterScreen extends StatefulWidget {
 
 class _ChapterScreenState extends State<ChapterScreen> {
   //final int totalTimeInSeconds = 15 * 60 - 1;
-  final int totalTimeInSeconds = 10; //for testing
+  final int totalTimeInSeconds = 3; //for testing
   final _random = Random();
   double timeElapsed = 0;
   int chapterNumber = 1;
@@ -190,8 +190,8 @@ class _ChapterScreenState extends State<ChapterScreen> {
                 alignment: Alignment.center,
                 children: [
                   Image.asset(
-                    'images/summary_background.png',
-                    height: 250,
+                    'images/summary_background1.png',
+                    width: 450,
                   ),
                   ColoredBox(
                     color: Colors.black.withOpacity(0.5),
