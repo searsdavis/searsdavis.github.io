@@ -22,7 +22,7 @@ class ChapterScreen extends StatefulWidget {
 
 class _ChapterScreenState extends State<ChapterScreen> {
   //final int totalTimeInSeconds = 15 * 60 - 1;
-  final int totalTimeInSeconds = 3; //for testing
+  final int totalTimeInSeconds = 10; //for testing
   final _random = Random();
   double timeElapsed = 0;
   int chapterNumber = 1;

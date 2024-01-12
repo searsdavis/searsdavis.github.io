@@ -55205,7 +55205,7 @@ case 2:return"Chapter Two: INFILTRATION"
 default:return"Chapter One: INVASION"}},
 R(a){var s,r,q=this,p=null,o={}
 o.a=o.b=o.c="00"
-q.w=new A.lK(3,new A.Wn(o,q),new A.Wo(q,a),B.aE,q.y,p)
+q.w=new A.lK(10,new A.Wn(o,q),new A.Wo(q,a),B.aE,q.y,p)
 q.x=new A.lK(4,new A.Wp(),new A.Wq(q,a),B.aE,q.z,p)
 o=A.Ot("images/background"+q.r+".png",p,p)
 s=A.aB(0,0,0,0)
@@ -55239,11 +55239,11 @@ h.b=s
 if(i<10)h.b="0"+s
 r=h.a=B.c.P(b,2).split(".")[1]
 i=r.length<2?h.a="0"+r:r
-this.b.f=3-b
+this.b.f=10-b
 q=h.c
 h=h.b
 p=A.aB(255,71,71,71)
-o=b/3*120
+o=b/10*120
 n=1-Math.abs(B.c.bx(o/60,2)-1)
 if(o<60){m=n
 l=1
