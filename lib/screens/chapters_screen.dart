@@ -21,8 +21,8 @@ class ChapterScreen extends StatefulWidget {
 }
 
 class _ChapterScreenState extends State<ChapterScreen> {
-  //final int totalTimeInSeconds = 15 * 60 - 1;
-  final int totalTimeInSeconds = 10; //for testing
+  final int totalTimeInSeconds = 10 * 60 - 1;
+  //final int totalTimeInSeconds = 10; //for testing
   final _random = Random();
   double timeElapsed = 0;
   int chapterNumber = 1;
@@ -91,7 +91,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
             "$_minutes:$_seconds:$_milliseconds",
             style: GoogleFonts.shareTechMono(
               textStyle: TextStyle(
-                  backgroundColor: Color.fromARGB(255, 71, 71, 71),
+                  backgroundColor: const Color.fromARGB(255, 71, 71, 71),
                   fontWeight: FontWeight.bold,
                   color: getCountdownColor(chapterTime),
                   fontSize: 52.0),
@@ -197,7 +197,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
                     color: Colors.black.withOpacity(0.5),
                   ),
                   Container(
-                    margin: EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(8.0),
                     //padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       border: Border.all(
@@ -241,7 +241,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
               chapterCountdown.controller?.resume();
               Navigator.of(context).pop();
               alertUnderway = false;
-              if (timeElapsed < 14.5 * 60) {
+              if (timeElapsed < 9.5 * 60) {
                 invisibleCountdown.controller?.restart();
               }
             },
